@@ -1,0 +1,18 @@
+<script>
+	export let label;
+	export let placeholder;
+	export let content;
+	export let required = false;
+</script>
+
+<div class="form-control w-full max-w-xs">
+	<label class="label">
+		<span class="label-text">{label}</span>
+	</label>
+	<select {required} class="select select-bordered">
+		<option disabled selected>{placeholder}</option>
+		{#each content as cont}
+			<option>{cont}</option>
+		{/each}
+	</select>
+</div>
