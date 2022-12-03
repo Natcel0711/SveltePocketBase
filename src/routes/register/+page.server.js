@@ -6,7 +6,6 @@ export const actions = {
 		const body = Object.fromEntries(await request.formData());
 
 		let username = generateUsername(body.name.split(' ').join('')).toLowerCase();
-        console.log(body)
 		try {
 			await locals.pb.collection('users').create({ username, ...body });
 			await locals.pb.collection('users').requestVerification(body.email);

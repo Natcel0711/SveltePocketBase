@@ -1,6 +1,5 @@
 <script>
-	import { applyAction, enhance } from '$app/forms';
-	import { invalidateAll } from '$app/navigation';
+	import { enhance } from '$app/forms';
 	import { Select, Checkbox } from '$lib/components';
 	let content = [1, 2, 3, 4, 5];
 </script>
