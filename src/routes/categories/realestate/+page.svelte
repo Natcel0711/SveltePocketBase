@@ -1,7 +1,10 @@
 <script>
 	import { enhance } from '$app/forms';
 	import { Select, Checkbox } from '$lib/components';
-	let content = [1, 2, 3, 4, 5];
+	let content = [1, 2, 3, 4, 5, 6];
+	import PueblosJson from './files/pueblos.json';
+	export let data;
+	let props = data.property_types.items.map((a) => a.name);
 </script>
 
 <div style="text-align:-moz-center;">
@@ -10,10 +13,20 @@
 			<form action="?/search" method="POST" use:enhance>
 				<h2 class="card-title justify-center">Search Real Estate</h2>
 				<div class="m-2">
-					<Select id="area" {content} label="Localizacion" placeholder="Region o Pueblos" />
+					<Select
+						id="area"
+						content={PueblosJson.Pueblos.sort()}
+						label="Localizacion"
+						placeholder="Region o Pueblos"
+					/>
 				</div>
 				<div class="m-2">
-					<Select id="propiedadType" {content} label="Tipo de propiedad" placeholder="Propiedad" />
+					<Select
+						id="propiedadType"
+						content={props}
+						label="Tipo de propiedad"
+						placeholder="Propiedad"
+					/>
 				</div>
 				<div class="grid grid-cols-2 gap-4">
 					<Select id="precioDesde" {content} label="" placeholder="Precio desde" />
