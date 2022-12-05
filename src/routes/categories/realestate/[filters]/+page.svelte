@@ -1,6 +1,6 @@
 <script>
 	import { getImageURL } from '$lib/utils';
-	const formatter = new Intl.NumberFormat('en-US', {
+	export const formatter = new Intl.NumberFormat('en-US', {
 		style: 'currency',
 		currency: 'USD'
 	});
