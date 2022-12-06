@@ -3,8 +3,14 @@
 	import { Select, Checkbox } from '$lib/components';
 	let content = [1, 2, 3, 4, 5, 6];
 	import PueblosJson from './files/pueblos.json';
+	import MoneyJson from './files/money.json';
+	import { formatter } from '$lib/utils';
 	export let data;
 	let props = data.property_types.items.map((a) => a.name);
+	let precios = [];
+	MoneyJson.Money.forEach((element) => {
+		precios.push(formatter.format(element + 1));
+	});
 </script>
 
 <div style="text-align:-moz-center;">
@@ -29,8 +35,8 @@
 					/>
 				</div>
 				<div class="grid grid-cols-2 gap-4">
-					<Select id="precioDesde" {content} label="" placeholder="Precio desde" />
-					<Select id="precioHasta" {content} label="" placeholder="Precio hasta" />
+					<Select id="precioDesde" content={precios} label="" placeholder="Precio desde" />
+					<Select id="precioHasta" content={precios} label="" placeholder="Precio hasta" />
 				</div>
 				<div class="m-2">
 					<Select id="cuartos" {content} label="Cantidad de habitaciones" placeholder="Cantidad" />
