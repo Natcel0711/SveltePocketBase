@@ -1,9 +1,10 @@
 <script>
 	import { enhance } from '$app/forms';
 	import { Select, Checkbox, MoneyJson, PueblosJson } from '$lib/components';
-	let content = [1, 2, 3, 4, 5, 6];
 	import { formatter } from '$lib/utils';
 	export let data;
+
+	let content = ['1', '2', '3', '4', '5', '+6'];
 	let props = data.property_types.items.map((a) => a.name);
 	let precios = [];
 	MoneyJson.Money.forEach((element) => {
