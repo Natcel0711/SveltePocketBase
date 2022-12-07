@@ -1,9 +1,7 @@
 <script>
 	import { enhance } from '$app/forms';
-	import { Select, Checkbox } from '$lib/components';
+	import { Select, Checkbox, MoneyJson, PueblosJson } from '$lib/components';
 	let content = [1, 2, 3, 4, 5, 6];
-	import PueblosJson from './files/pueblos.json';
-	import MoneyJson from './files/money.json';
 	import { formatter } from '$lib/utils';
 	export let data;
 	let props = data.property_types.items.map((a) => a.name);

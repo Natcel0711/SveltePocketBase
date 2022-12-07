@@ -1,0 +1,11 @@
+{
+    "species":[
+        "Acuaticos/Aquatic",
+        "Aves/Birds",
+        "Caballos/Horses",
+        "Gatos/Cats",
+        "Otros/Other",
+        "Perros/Dogs",
+        "Reptiles/Reptiles"
+    ]
+}

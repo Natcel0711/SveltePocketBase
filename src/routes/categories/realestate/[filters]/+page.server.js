@@ -6,7 +6,7 @@ export const load = ({ locals, params }) => {
 		try {
 			const objFilters = JSON.parse(filters);
 			const resultList = serializeNonPOJOs(
-				await locals.pb.collection('posts').getList(1, 50, {
+				await locals.pb.collection('real_estate_posts').getList(1, 50, {
 					expand: 'property_type',
 					filter: await getFilters(objFilters)
 				})
