@@ -37,6 +37,7 @@ const getFilters = async (filters) => {
 	// else filterString.push(`opcionada = false`);
 	// if (filters.reposeidas) filterString.push(`reposeida = true`);
 	// else filterString.push(`reposeida = false`);
+	filterString.push(`category="Rent"`);
 	console.log(filterString.join(' && '), filters);
 	return filterString.join(' && ');
 };

@@ -33,6 +33,7 @@ const getFilters = async (filters) => {
 		filterString.push(`price <= ${Number(filters.precioHasta.replace(/[^0-9.-]+/g, ''))}`);
 	if (filters.cuartos) filterString.push(`rooms >= ${filters.cuartos}`);
 
+	filterString.push(`category = "Buy"`);
 	// if (filters.opcionadas) filterString.push(`opcionada = true`);
 	// else filterString.push(`opcionada = false`);
 	// if (filters.reposeidas) filterString.push(`reposeida = true`);

@@ -9,20 +9,8 @@ export const actions = {
 			console.log('Error: ', err);
 			throw error(400, 'Something went wrong updating your profile');
 		}
-		throw redirect(303, '/categories/realestate/' + JSON.stringify(body));
+		throw redirect(303, '/categories/pets/' + JSON.stringify(body));
 	}
 };
 
-export const load = async ({ locals }) => {
-	try {
-		const resultList = serializeNonPOJOs(
-			await locals.pb.collection('property_type').getList(1, 50)
-		);
-		return {
-			property_types: resultList
-		};
-	} catch (err) {
-		console.log('Error: ', err);
-		throw error(303, '/');
-	}
-};
+export const load = async ({ locals }) => {};
